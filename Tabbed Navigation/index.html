@@ -7,16 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 
-	<script type="text/javascript">
-	$(document).ready(function(){
-		$('a.tab').click(function(){
-			$('.active').removeClass('active');
-			$(this).addClass('active');
-			$('.content').slideUp();
-			var content_show = $(this).attr('title');
-			$('#'+content_show).slideDown();
-		});
-	});
+
 		
 	</script>
 </head>
