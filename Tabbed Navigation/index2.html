@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tabbed Navigation</title>
+	<link rel="stylesheet" href="style2.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('a.tab').click(function(){
+			$('.active').removeClass('active');
+			$(this).addClass('active');
+			$('.content').slideUp();
+			var content_show = $(this).attr('title');
+			$('#'+content_show).slideDown();
+		});
+	});
+	
+	</script>
+</head>
+<body>
+	<div id="tabbed_nav">
+		<h4>Site Navigation</h4>
+		<div id="tabbed_area">
+			<ul id="tabs">
+				<li><a href="#" class="active tab" title="home">Home</a></li>
+				<li><a href="#" class="tab" title="news">News</a></li>
+				<li><a href="#" class="tab" title="forum">Forum</a></li>
+			</ul>
+
+			<div id="home" class="content">
+				<ul >
+					<li><a href="#">Home 1 </a></li>
+					<li><a href="#">Home 1 </a></li>
+					<li><a href="#">Home 1 </a></li>
+					<li><a href="#">Home 1 </a></li>
+					<li><a href="#">Home 1 </a></li>
+				</ul>
+			</div><!-- End #home.content-->
+			<div id="news" class="content">
+				<ul>
+					<li><a href="#">News 1 </a></li>
+					<li><a href="#">News 1 </a></li>
+					<li><a href="#">News 1 </a></li>
+					<li><a href="#">News 1 </a></li>
+					<li><a href="#">News 1 </a></li>
+				</ul>
+			</div><!--End #news.content -->
+			<div id="forum" class="content">
+				<ul>
+					<li><a href="#">Forum 1 </a></li>
+					<li><a href="#">Forum 1 </a></li>
+					<li><a href="#">Forum 1 </a></li>
+					<li><a href="#">Forum 1 </a></li>
+					<li><a href="#">Forum 1 </a></li>
+				</ul>
+			</div><!--End #forum.content -->	
+		</div><!--End #tabbed_area -->
+	</div><!--End #tabbed_nav -->
+
+</body>
+</html>

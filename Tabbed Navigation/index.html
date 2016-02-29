@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tabbed Navigation</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('a.tab').click(function(){
+			$('.active').removeClass('active');
+			$(this).addClass('active');
+			$('.content').slideUp();
+			var content_show = $(this).attr('title');
+			$('#'+content_show).slideDown();
+		});
+	});
+		
+	</script>
+</head>
+<body>
+	<div id="tabbed_nav" class="tabbed_nav">
+		<h4>Site Navigation</h4>
+		<div class="tabbed_area">
+			<ul class="tabs">
+				<li><a href="#" title="feature" class="active tab">Feature</a></li>
+				<li><a href="#" title="news" class="tab">News</a></li>
+				<li><a href="#" title="popular" class="tab">Popular</a></li>
+			</ul>
+			<div id="feature" class="content">
+				<ul>  
+					<li><a href="">Từ PSD sang HTML (phần 4/5)</a></li>  
+					<li><a href="">Giao diện với CSS – Phần 1</a></li>  
+					<li><a href="">Flyout Menu với CSS</a></li>  
+					<li><a href="">Công cụ để làm web </a></li>  
+					<li><a href="">Phần 1: Chuyển PSD thành xHTML</a></li>  
+					<li><a href="">Dropdown Menu với CSS </a></li>
+					<li><a href="">Tạo trang web đầu tiên </a></li>
+				</ul>  
+			</div><!-- end #feature-->
+
+			<div id="news" class="content">
+				<ul>  
+					<li><a href ="">Độ cao của Div</a></li>  
+					<li><a href ="">Cài đặt WordPress ở Localhost</a></li>  
+					<li><a href ="">Cài đặt Localhost – WAMP</a></li>  
+					<li><a href ="">Absolute Position trong thiết kế giao diện</a></li>  
+					<li><a href ="">Cách sử dụng Sprite Image</a></li>  
+					<li><a href ="">10 lý do bạn nên sử dụng WordPress</a></li>
+					<li><a href ="">Độ cao của Div</a></li>  
+					<li><a href ="">Cài đặt WordPress ở Localhost</a></li>  
+				</ul> 
+			</div><!-- end #news-->
+
+			<div id="popular" class="content">
+				<ul id="nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div><!-- end #popular-->
+		</div><!-- .tabbed_area-->
+	</div><!-- end  #tabbed_nav--> 
+</body>
+</html>

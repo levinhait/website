@@ -1,0 +1,79 @@
+
+#tabbed_nav{
+	width: 300px;
+	height: auto;
+	margin: 30px auto;
+	font-family: helvetica,arial,sans-serif;
+	font-size: 1,3em;
+}
+#tabbed_nav h4{
+	padding: 0px 0px 15px 0px;
+	width: 100%;
+	text-align: center;
+}
+#tabbed_area{
+	border: 1px solid #494e52;
+	background: #183d57;
+	padding: 10px;
+}
+ul{
+	list-style: none;
+}
+ul#tabs{
+	overflow: hidden;
+	margin:5px 0px 0px 0px;
+	padding: 0px;
+}
+ul#tabs li{
+	list-style: none;
+	display: inline;
+}
+ul#tabs li a{
+	border-radius: 5px 5px 0px 0px;
+	display: block;
+	background: #F10808;
+	margin-right: 10px;
+	width: 82px;
+	float: left;
+	padding: 5px 0px 5px 0px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color:white;
+}
+ul#tabs li a:hover{
+	background: #2fa0e1;
+}
+ul#tabs li a.active{
+	background: #2fa0e1;
+}
+
+#news, #forum{
+	display: none;
+}
+.content{
+	width:246px;
+	background: #2fa0e1;
+	padding: 10px;
+	position: relative;
+	z-index:1000;
+}
+.content ul{
+	margin: 0px;
+	padding: 0px 20px;
+}
+.content ul li{
+	padding: 10px 0px;
+	border-bottom: 1px solid #DEDBDB;
+}
+.content ul li a{
+	display: block;
+	text-decoration:none;
+	color: #b3e3ff;
+}
+.content ul li a:hover{
+	color:white;
+}
+.content ul li:last-child{
+	border-bottom: none;
+}
