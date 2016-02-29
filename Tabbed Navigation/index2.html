@@ -8,15 +8,20 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
+		/* Khi mà click vào cái a.tab*/
 		$('a.tab').click(function(){
+			//remove cái class active cái a.active hiện hành
 			$('.active').removeClass('active');
+			//add cái class active tại chính cái a.tab đã click
 			$(this).addClass('active');
+			//Ẩn đi cái conten hiện hành 
 			$('.content').slideUp();
+			//tạo biến lấy title của tab đã click
 			var content_show = $(this).attr('title');
+			//Hiện ra content cái tab có title đã click
 			$('#'+content_show).slideDown();
 		});
-	});
-	
+	});	
 	</script>
 </head>
 <body>
@@ -28,7 +33,6 @@
 				<li><a href="#" class="tab" title="news">News</a></li>
 				<li><a href="#" class="tab" title="forum">Forum</a></li>
 			</ul>
-
 			<div id="home" class="content">
 				<ul >
 					<li><a href="#">Home 1 </a></li>
